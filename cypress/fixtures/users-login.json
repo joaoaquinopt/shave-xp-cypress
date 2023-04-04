@@ -1,0 +1,33 @@
+{
+    "success": {
+        "name": "Joao",
+        "email": "aquino@yahoo.com",
+        "password": "pwd123"
+    },
+    "invpwd": {
+        "email": "aquino@yahoo.com",
+        "password": "123456"
+    },
+    "invemail": {
+        "email": "joao@1234.com",
+        "password": "123456"
+    },
+    "shortpwd": [
+        "1",
+        "12",
+        "123",
+        "1234",
+        "12345"
+    ],
+    "wrongpwd": [
+        "joao.com.br",
+        "joao@com",
+        "joao&com.br",
+        "@gmail.com",
+        "joao@",
+        "@",
+        "123456",
+        "@#$%.com",
+        "xpto124"
+    ]
+}
