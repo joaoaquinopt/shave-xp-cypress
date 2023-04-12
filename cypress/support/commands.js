@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+const { response } = require("express")
+
 Cypress.Commands.add('createUser', (user) => {
    
     // cy.request({
@@ -60,4 +62,23 @@ Cypress.Commands.add('getToken', (email)=> {
         expect(result.status).to.eql(200)
         Cypress.env('passToken', result.body.token)
     })
+})
+
+//Fazer Login via API
+Cypress.Commands.add('apiLogin', (user)=> {
+
+    cy.request({
+        method: 'POST',
+        url: 'http://localhost:3333/sessions',
+        body: { email: user.email, password: user.password }
+    }).then(response => {
+        expect(response.status).to.eql(200)
+
+        const {user, token} = response.body
+
+        window.localStorage.setItem('@ShaveXP:token', token)
+        window.localStorage.setItem('@ShaveXP:user', JSON.stringify(user))
+    })
+
+
 })

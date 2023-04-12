@@ -1,0 +1,16 @@
+{
+    "customer": {
+        "name": "Rafael Nadal",
+        "email": "nadal@open.com",
+        "password": "pwd123",
+        "is_shaver": false
+    },
+    "shaver":{
+        "name": "Jeremy Adams",
+        "confirmShaver": "Será o seu Shaver"
+    },
+    "service": {
+        "description": "Corte de cabelo",
+        "price": "79.99"
+    }
+}
