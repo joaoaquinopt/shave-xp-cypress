@@ -13,9 +13,7 @@ describe('login', () => {
             // Ao fazer o import da Fixture, ao invés de passar a massa de teste aqui, iria apontar para a fixture, como:
             // const user = data
             const user = data.success
-
             cy.createUser(user)
-
             loginPage.submit(user.email, user.password)
             shaversPage.header.userShouldBeLoggedIn(user.name)
 

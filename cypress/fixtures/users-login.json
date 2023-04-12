@@ -2,7 +2,8 @@
     "success": {
         "name": "Joao",
         "email": "aquino@yahoo.com",
-        "password": "pwd123"
+        "password": "pwd123",
+        "is_shaver": false
     },
     "invpwd": {
         "email": "aquino@yahoo.com",
